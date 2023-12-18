@@ -14,12 +14,13 @@ python3.9 manage.py startapp useradmin
 ```
 
 ## 3. Configurar la Base de Datos MySQL
-### 3.1 Instalar el controlador para MySQL
+### 3.1 Instalar el controlador para MySQL
+
 ```bash
 pip install mysqlclient
 ```
 
-## 3.2 Configurar la conexión en mysite/settings.py
+### 3.2 Configurar la conexión en mysite/settings.py
 
 ```python
 # En el archivo mysite/settings.py
