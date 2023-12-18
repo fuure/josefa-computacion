@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserAdmin - Index</title>
+    <!-- Agrega aquí los enlaces a los archivos CSS y JS de Bootstrap -->
+</head>
+<body>
+    <h1>UserAdmin - Index</h1>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }} - {{ item.description }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_item' %}">Crear nuevo item</a>
+</body>
+</html>
