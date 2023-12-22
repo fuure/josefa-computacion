@@ -5,36 +5,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}UserAdmin{% endblock %}</title>
+    <title>{% block title %}Josefa Computación{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <h1>Josefa Computación User Admin</h1>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-left">
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'customer_list' %}">Customers</a>
+                    <a class="nav-link" href="{% url 'customer_list' %}">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'product_list' %}">Products</a>
+                    <a class="nav-link" href="{% url 'product_list' %}">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'purchase_list' %}">Purchases</a>
+                    <a class="nav-link" href="{% url 'purchase_list' %}">Compras</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container mt-3">
+    <header class="container-fluid">
+        <img src="{% static 'images/banner.jpg' %}" class="img-fluid" alt="Banner Image">
+    </header>
+
+    <main class="container mt-3">
         {% block content %}
         {% endblock %}
-    </div>
+    </main>
 
-    <!-- Incluye los scripts de Bootstrap y jQuery (necesario para algunos componentes de Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-M8erLIDt6UpA0IgUg6i9zjQ8Bct5PFjQTbJ2yxdK0D5jj6QJ8DO/CqbE6qNQxk5I" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-GLhlTQ8i1FkGsOp3H+7wrW+LDEz1x0rj/ZiCksT+Ia9XTxIep9tiCxI2M+5MIJh9" crossorigin="anonymous"></script>
 </body>
 </html>
+

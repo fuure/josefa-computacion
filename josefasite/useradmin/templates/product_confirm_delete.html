@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Borrar cliente</h2>
-  <p>Estás seguro que quieres eliminar al cliente '{{ customer.name }}'?</p>
+  <h2>Borrar producto</h2>
+  <p>Estás seguro que quieres eliminar al producto '{{ product.name }}'?</p>
   <form method="post">
     {% csrf_token %}
     <button type="submit" class="btn btn-danger">Si, eliminar</button>
   </form>
-  <a href="{% url 'customer_list' %}" class="btn btn-primary">Cancelar</a>
+  <a href="{% url 'product_list' %}" class="btn btn-primary">Cancelar</a>
 {% endblock %}

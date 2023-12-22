@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Customer List</h2>
-  <a href="{% url 'customer_create' %}" class="btn btn-primary">Add Customer</a>
+  <h2>Clientes</h2>
+  <a href="{% url 'customer_create' %}" class="btn btn-primary">Agregar cliente</a>
 
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Action</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Acción</th>
       </tr>
     </thead>
     <tbody>
@@ -18,9 +18,9 @@
           <td>{{ customer.name }}</td>
           <td>{{ customer.description }}</td>
           <td>
-            <a href="{% url 'customer_detail' customer.id %}" class="btn btn-info btn-sm">Detail</a>
-            <a href="{% url 'customer_update' customer.id %}" class="btn btn-warning btn-sm">Edit</a>
-            <a href="{% url 'customer_delete' customer.id %}" class="btn btn-danger btn-sm">Delete</a>
+            <a href="{% url 'customer_detail' customer.id %}" class="btn btn-info btn-sm">Detalle</a>
+            <a href="{% url 'customer_update' customer.id %}" class="btn btn-warning btn-sm">Editar</a>
+            <a href="{% url 'customer_delete' customer.id %}" class="btn btn-danger btn-sm">Eliminar</a>
           </td>
         </tr>
       {% endfor %}

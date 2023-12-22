@@ -7,3 +7,30 @@ body {
     background-color: #007bff;
     color: #ffffff;
 }
+
+/* static/css/styles.css */
+
+/* Barra de navegación fija a la izquierda */
+.navbar.fixed-left {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para la lista vertical en la barra de navegación */
+.navbar-nav.flex-column {
+    width: 100%;
+}
+
+/* Banner superior con imagen */
+header {
+    text-align: center;
+    margin-top: 70px; /* Ajusta según sea necesario para evitar que la barra de navegación cubra la imagen */
+}
+
+/* Ajustes adicionales según sea necesario */

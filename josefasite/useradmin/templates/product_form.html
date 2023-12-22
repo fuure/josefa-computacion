@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>{% if form.instance.id %}Editar{% else %}Agregar{% endif %} Cliente</h2>
+  <h2>{% if form.instance.id %}Editar{% else %}Agregar{% endif %} producto</h2>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-success">Guardar</button>
   </form>
-  <a href="{% url 'customer_list' %}" class="btn btn-primary">Volver a clientes</a>
+  <a href="{% url 'product_list' %}" class="btn btn-primary">Volver a productos</a>
 {% endblock %}
